@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/header_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/background_text_height"
+        android:weightSum="1" >
+
+        <com.labs.jangkriek.animalpuzzle.CustomTitleTextview
+            android:id="@+id/no_textview"
+            style="@style/score_list_TextStyle"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="@string/score_no" />
+
+        <com.labs.jangkriek.animalpuzzle.CustomTitleTextview
+            android:id="@+id/time_textview"
+            style="@style/score_list_TextStyle"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="@string/time" />
+
+        <com.labs.jangkriek.animalpuzzle.CustomTitleTextview
+            android:id="@+id/moves_textview"
+            style="@style/score_list_TextStyle"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="@string/moves" />
+
+        <com.labs.jangkriek.animalpuzzle.CustomDescriptionTextview
+            android:id="@+id/helptaken_textview"
+            style="@style/score_list_TextStyle"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="@string/hint_taken" />
+    </LinearLayout>
+
+</RelativeLayout>

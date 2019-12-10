@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <color name="white">#ffffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="dilaog_background">#AA000000</color>
+    <color name="selected_color">#AAFFFFFF</color>
+    <color name="red">#e56c69</color>
+    <color name="border_color">#ffffffff</color>
+    <color name="thick_blue">#003399</color>
+  <color name="bg_transparant">#B0000000</color>
+
+
+</resources>

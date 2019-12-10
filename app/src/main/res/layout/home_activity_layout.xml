@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/sky"
+  android:fitsSystemWindows="true">
+
+  <RelativeLayout
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<RelativeLayout
+	  android:id="@+id/setting_layout"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:layout_marginTop="20dp"
+	  android:layout_marginEnd="20dp"
+	  android:layout_alignParentEnd="true"
+	  android:onClick="viewClickHandler">
+
+	  <ImageView
+		android:layout_width="50dp"
+		android:layout_height="50dp"
+		android:layout_centerInParent="true"
+		android:src="@drawable/ripple1"
+		android:background="@drawable/setting"
+		android:focusable="false" />
+	</RelativeLayout>
+
+	<RelativeLayout
+	  android:id="@+id/slidepuzzle_scores_layout"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:layout_marginTop="20dp"
+	  android:layout_marginEnd="80dp"
+	  android:layout_alignParentEnd="true"
+	  android:onClick="viewClickHandler">
+
+	  <ImageView
+		android:layout_width="50dp"
+		android:layout_height="50dp"
+		android:layout_centerInParent="true"
+		android:background="@drawable/ranking"
+		android:src="@drawable/ripple1"
+		android:focusable="false" />
+	</RelativeLayout>
+
+  </RelativeLayout>
+
+  <RelativeLayout
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content">
+
+	<LinearLayout
+	  android:layout_width="match_parent"
+	  android:layout_alignParentBottom="true"
+	  android:orientation="horizontal"
+	  android:layout_height="wrap_content">
+
+	  <ImageView
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:src="@drawable/grasscliffmid">
+	  </ImageView>
+	  <ImageView
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:src="@drawable/grasscliffmid">
+	  </ImageView>
+	  <ImageView
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:src="@drawable/grasscliffmid">
+	  </ImageView>
+	  <ImageView
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:src="@drawable/grasscliffmid">
+	  </ImageView>
+	  <ImageView
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:src="@drawable/grasscliffmid">
+	  </ImageView>
+	  <ImageView
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:src="@drawable/grasscliffmid">
+	  </ImageView>
+	  <ImageView
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:src="@drawable/grasscliffmid">
+	  </ImageView>
+	  <ImageView
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:src="@drawable/grasscliffmid">
+	  </ImageView>
+	  <ImageView
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:src="@drawable/grasscliffmid">
+	  </ImageView>
+	  <ImageView
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:src="@drawable/grasscliffmid">
+	  </ImageView>
+	  <ImageView
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:src="@drawable/grasscliffmid">
+	  </ImageView>
+	  <ImageView
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:src="@drawable/grasscliffmid">
+	  </ImageView>
+	  <ImageView
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:src="@drawable/grasscliffmid">
+	  </ImageView>
+	</LinearLayout>
+
+	<RelativeLayout
+	  android:layout_width="match_parent"
+	  android:layout_marginBottom="80dp"
+	  android:layout_height="wrap_content">
+	  <ImageView
+		android:layout_width="50dp"
+		android:layout_alignParentBottom="true"
+		android:layout_height="50dp"
+		android:src="@drawable/grass1">
+	  </ImageView>
+	  <ImageView
+		android:layout_width="250dp"
+		android:layout_alignParentBottom="true"
+		android:layout_height="250dp"
+		android:src="@drawable/grass2">
+	  </ImageView>
+	  <com.airbnb.lottie.LottieAnimationView
+		android:layout_width="70dp"
+		android:layout_height="70dp"
+		android:scaleType="centerCrop"
+		android:layout_marginEnd="30dp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentEnd="true"
+		app:lottie_rawRes="@raw/tiger"
+		app:lottie_loop="true"
+		app:lottie_autoPlay="true" >
+
+	  </com.airbnb.lottie.LottieAnimationView>
+	</RelativeLayout>
+
+  </RelativeLayout>
+
+  <RelativeLayout
+	android:id="@+id/rl_top"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_centerInParent="true">
+
+	<ImageView
+	  android:id="@+id/splash_preview_imageview"
+	  android:layout_width="205dp"
+	  android:layout_height="145dp"
+	  android:layout_marginBottom="100dp"
+	  android:layout_centerHorizontal="true"
+	  android:background="@drawable/logotok" />
+
+	<RelativeLayout
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:id="@+id/rlstart"
+	  android:layout_centerHorizontal="true"
+	  android:layout_below="@+id/splash_preview_imageview"
+	  android:onClick="viewClickHandler">
+	<ImageView
+	  android:layout_width="200dp"
+	  android:layout_height="65dp"
+	  android:layout_marginBottom="20dp"
+	  android:background="@drawable/start"
+	  android:src="@drawable/ripple"
+	  android:focusable="true" />
+	</RelativeLayout>
+	<RelativeLayout
+	  android:id="@+id/rlexit"
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:layout_centerInParent="true"
+	  android:layout_below="@+id/rlstart"
+	  android:onClick="viewClickHandler">
+	<ImageView
+	  android:layout_width="170dp"
+	  android:layout_height="59dp"
+	  android:background="@drawable/exit"
+	  android:src="@drawable/ripple"
+	  android:focusable="true" />
+	</RelativeLayout>
+
+  </RelativeLayout>
+
+  <RelativeLayout
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_centerInParent="true">
+
+	<LinearLayout
+	  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+	  android:layout_centerHorizontal="true"
+	  android:layout_marginTop="@dimen/splash_thumbnail_margin"
+	  android:orientation="vertical">
+
+	</LinearLayout>
+
+  </RelativeLayout>
+
+
+  <com.labs.jangkriek.animalpuzzle.CustomTitleTextview
+	style="@style/jangkriek_TextStyle"
+	android:layout_alignParentBottom="true"
+	android:layout_centerHorizontal="true"
+	android:layout_marginEnd="10dp"
+	android:layout_marginBottom="5dp"
+	android:layout_width="wrap_content"
+	android:layout_height="25dp"
+	android:gravity="center"
+	android:text="JangkriekLabs" />
+
+  <com.labs.jangkriek.animalpuzzle.CustomTitleTextview
+	style="@style/SplashTitleTextStyle"
+	android:layout_centerHorizontal="true"
+	android:layout_marginBottom="5dp"
+	android:padding="3dp"
+	android:layout_width="wrap_content"
+	android:layout_height="45dp"
+	android:layout_above="@+id/rl_top"
+	android:gravity="center"
+	android:text="Animal Puzzle" />
+
+  <RelativeLayout
+	android:id="@+id/loading"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/bg_transparant"
+	android:visibility="invisible">
+
+	<androidx.cardview.widget.CardView
+	  android:layout_width="130dp"
+	  android:layout_height="130dp"
+	  android:layout_centerInParent="true"
+	  android:background="@color/white"
+	  android:padding="30dp"
+	  app:cardBackgroundColor="#FFFFFF"
+	  app:cardCornerRadius="30dp">
+
+	  <com.airbnb.lottie.LottieAnimationView
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:layout_gravity="center"
+		android:scaleType="centerCrop"
+		app:lottie_autoPlay="true"
+		app:lottie_loop="true"
+		app:lottie_rawRes="@raw/confetti">
+
+	  </com.airbnb.lottie.LottieAnimationView>
+	</androidx.cardview.widget.CardView>
+  </RelativeLayout>
+
+</RelativeLayout>

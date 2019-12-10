@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <dimen name="hint_text_size">35dip</dimen>
+    <dimen name="game_view_padding">10dip</dimen>
+    <dimen name="button_width">160dip</dimen>
+  <dimen name="background_text_height">80dip</dimen>
+    <dimen name="dialog_item_height">65dip</dimen>
+    <dimen name="view_left_right_padding">10dip</dimen>
+    <dimen name="dialog_width">380dip</dimen>
+    <dimen name="dialog_height">265dip</dimen>
+    <dimen name="setting_item_height">80dip</dimen>
+    <dimen name="view_left_right_margin">15dip</dimen>
+  <dimen name="grid_view_padding">20dip</dimen>
+    <dimen name="grid_view_spacing">10dip</dimen>
+    <dimen name="titlebar_height">55dip</dimen>
+    <dimen name="tex_size_normal">22sp</dimen>
+    <dimen name="button_padding_left_right">35dip</dimen>
+  <dimen name="splash_thumbnail_margin">80dip</dimen>
+
+</resources>

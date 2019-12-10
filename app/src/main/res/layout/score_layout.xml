@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+    android:background="@drawable/sky"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/titlebar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="@drawable/actionbar" >
+
+        <com.labs.jangkriek.animalpuzzle.CustomTitleTextview
+            android:id="@+id/title"
+            style="@style/TitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/view_left_right_margin"
+            android:text="@string/score" />
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/titlebar_layout" >
+
+        <RelativeLayout
+            android:id="@+id/bottom_ads_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" >
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_transparant"
+            android:layout_below="@id/bottom_ads_view" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/very_easy_level_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:layout_marginLeft="@dimen/view_left_right_margin"
+                    android:layout_marginRight="@dimen/view_left_right_margin"
+                    android:onClick="viewClickHandler" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true" >
+
+                        <com.labs.jangkriek.animalpuzzle.CustomTitleTextview
+                            android:id="@+id/very_easy_level_textView"
+                            style="@style/MenuTitleTextStyle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/very_easy_level_score"
+                            android:textColor="@color/white" />
+
+                        <com.labs.jangkriek.animalpuzzle.CustomTitleTextview
+                            android:id="@+id/very_easy_highscore_textview"
+                            style="@style/Sub_item_TextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/very_easy_level_textView"
+                            android:text="@string/high_score"
+                            android:visibility="gone" />
+
+                        <TextView
+                          style="@style/Sub_item_TextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/very_easy_level_textView"
+                            android:layout_toRightOf="@id/very_easy_highscore_textview"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/very_arrow_imageview1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/very_divider1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_below="@id/very_easy_level_layout"
+                    android:background="@color/white" />
+
+                <RelativeLayout
+                  android:id="@+id/easy_level_layout"
+                  android:layout_width="fill_parent"
+                  android:layout_height="@dimen/setting_item_height"
+                  android:layout_below="@id/very_easy_level_layout"
+                  android:layout_marginLeft="@dimen/view_left_right_margin"
+                  android:layout_marginRight="@dimen/view_left_right_margin"
+                  android:onClick="viewClickHandler" >
+
+                    <RelativeLayout
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_centerVertical="true" >
+
+                        <com.labs.jangkriek.animalpuzzle.CustomTitleTextview
+                          android:id="@+id/easy_level_textView"
+                          style="@style/MenuTitleTextStyle"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:text="@string/easy_level_score"
+                          android:textColor="@color/white" />
+
+                        <com.labs.jangkriek.animalpuzzle.CustomTitleTextview
+                          android:id="@+id/easy_highscore_textview"
+                          style="@style/Sub_item_TextStyle"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@id/easy_level_textView"
+                          android:text="@string/high_score"
+                          android:visibility="gone" />
+
+                        <TextView
+                          style="@style/Sub_item_TextStyle"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@id/easy_level_textView"
+                          android:layout_toRightOf="@id/easy_highscore_textview"
+                          android:visibility="gone" />
+
+                        <ImageView
+                          android:id="@+id/arrow_imageview1"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentRight="true"
+                          android:layout_centerVertical="true"
+                          android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                  android:id="@+id/divider1"
+                  android:layout_width="fill_parent"
+                  android:layout_height="@dimen/divider_height"
+                  android:layout_below="@id/easy_level_layout"
+                  android:background="@color/white" />
+
+                <RelativeLayout
+                    android:id="@+id/medium_level_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:layout_below="@id/divider1"
+                    android:layout_marginLeft="@dimen/view_left_right_margin"
+                    android:layout_marginRight="@dimen/view_left_right_margin"
+                    android:onClick="viewClickHandler" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true" >
+
+                        <com.labs.jangkriek.animalpuzzle.CustomTitleTextview
+                            android:id="@+id/medium_level_textView"
+                            style="@style/MenuTitleTextStyle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/medium_level_score"
+                            android:textColor="@color/white" />
+
+                        <com.labs.jangkriek.animalpuzzle.CustomDescriptionTextview
+                            android:id="@+id/medium_highscore_textview"
+                            style="@style/Sub_item_TextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/medium_level_textView"
+                            android:text="@string/high_score"
+                            android:visibility="gone" />
+
+                        <TextView
+                          style="@style/Sub_item_TextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/medium_level_textView"
+                            android:layout_toRightOf="@id/medium_highscore_textview"
+                            android:visibility="gone" />
+
+                        <ImageView
+                          android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_below="@id/medium_level_layout"
+                    android:background="@color/white" />
+
+                <RelativeLayout
+                    android:id="@+id/hard_level_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/setting_item_height"
+                    android:layout_below="@id/divider2"
+                    android:layout_marginLeft="@dimen/view_left_right_margin"
+                    android:layout_marginRight="@dimen/view_left_right_margin"
+                    android:onClick="viewClickHandler" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true" >
+
+                        <com.labs.jangkriek.animalpuzzle.CustomTitleTextview
+                            android:id="@+id/hard_level_textView"
+                            style="@style/MenuTitleTextStyle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hard_level_score"
+                            android:textColor="@color/white" />
+
+                        <com.labs.jangkriek.animalpuzzle.CustomDescriptionTextview
+                            android:id="@+id/hard_highscore_textview"
+                            style="@style/Sub_item_TextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/hard_level_textView"
+                            android:text="@string/high_score"
+                            android:visibility="gone" />
+
+                        <TextView
+                          style="@style/Sub_item_TextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/hard_level_textView"
+                            android:layout_toRightOf="@id/hard_highscore_textview"
+                            android:visibility="gone" />
+
+                        <ImageView
+                          android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_below="@id/hard_level_layout"
+                    android:background="@color/white" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

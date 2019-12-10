@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/titlebar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="@drawable/actionbar" >
+
+        <com.labs.jangkriek.animalpuzzle.CustomTitleTextview
+            android:id="@+id/title_textview"
+            style="@style/TitleTextStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/view_left_right_margin"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="1" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tabs_bar2"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/menu_icon_bar_height"
+        android:padding="8dp"
+        android:layout_below="@id/titlebar_layout"
+        android:weightSum="1" >
+
+        <RelativeLayout
+            android:id="@+id/tabs_bar2_view1"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"
+            android:background="@drawable/icons_selector"
+            android:onClick="viewClickHandler" >
+
+            <ImageView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:layout_centerInParent="true"
+              android:src="@drawable/button_round" />
+
+            <ImageView
+                android:id="@+id/play_pause_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tabs_bar2_view2"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"
+            android:background="@drawable/icons_selector"
+            android:onClick="viewClickHandler" >
+
+            <ImageView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:layout_centerInParent="true"
+              android:src="@drawable/button_round" />
+            <ImageView
+                android:id="@+id/undo_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+          android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"
+            android:background="@drawable/icons_selector" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <TextView
+                    android:id="@+id/timetext_textview"
+                    style="@style/HintHeaderTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/time" />
+
+                <Chronometer
+                    android:id="@+id/timer_view"
+                    style="@style/CounterTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/timetext_textview"
+                    android:layout_centerHorizontal="true"
+                    android:saveEnabled="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+          android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"
+            android:background="@drawable/icons_selector" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <TextView
+                    android:id="@+id/movestext_textview"
+                    style="@style/HintHeaderTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/moves" />
+
+                <TextView
+                    android:id="@+id/moves_textview"
+                    style="@style/CounterTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/movestext_textview"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_ads_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+        <com.google.android.gms.ads.AdView
+          xmlns:ads="http://schemas.android.com/apk/res-auto"
+          android:id="@+id/adView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          ads:adSize="BANNER"
+          ads:adUnitId="ca-app-pub-2732887939805010/6591832467">
+            <!--asli-->
+            <!--ca-app-pub-2732887939805010/6591832467-->
+            <!--test-->
+            <!--ca-app-pub-3940256099942544/6300978111-->
+        </com.google.android.gms.ads.AdView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom_ads_view"
+        android:layout_below="@id/tabs_bar2" >
+
+        <LinearLayout
+            android:id="@+id/tabs_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/menu_icon_bar_height"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:weightSum="1" >
+
+            <RelativeLayout
+                android:id="@+id/tabs_bar_view1"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.20"
+                android:background="@drawable/icons_selector"
+                android:onClick="viewClickHandler" >
+
+                <ImageView
+                  android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/button_round" />
+                <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:layout_centerInParent="true"
+                  android:src="@drawable/arrow_left" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tabs_bar_view2"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.20"
+                android:background="@drawable/icons_selector"
+                android:onClick="viewClickHandler" >
+
+                <ImageView
+                    android:id="@+id/tabs_bar2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/button_round" />
+                <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:layout_centerInParent="true"
+                  android:src="@drawable/arrow_right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tabs_bar_view3"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.20"
+                android:background="@drawable/icons_selector"
+                android:onClick="viewClickHandler" >
+
+                <ImageView
+                  android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                  android:background="@drawable/button_round" />
+                <ImageView
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:layout_centerInParent="true"
+                  android:src="@drawable/repeat" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tabs_bar_view4"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.2"
+                android:background="@drawable/icons_selector"
+                android:onClick="viewClickHandler" >
+
+                <ImageView
+                    android:id="@+id/tabs_bar4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/button_round" />
+                <ImageView
+                  android:id="@+id/tabs_bar31"
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:layout_centerInParent="true"
+                  android:src="@drawable/setting" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tabs_bar_view5"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.20"
+                android:background="@drawable/icons_selector"
+                android:onClick="viewClickHandler" >
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:background="@drawable/button_round">
+
+                    <TextView
+                      style="@style/HintHeaderTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/hint" />
+
+                    <!--<ImageView
+                        android:id="@+id/tabs_bar5_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tabs_bar5_textview"
+                        android:layout_centerHorizontal="true"
+                        android:focusable="false" />-->
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+          android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/tabs_bar"
+            android:background="@drawable/sky"
+            android:padding="@dimen/game_view_padding" >
+
+            <com.labs.jangkriek.animalpuzzle.activity.TileView
+                android:id="@+id/tile_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:focusableInTouchMode="true" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/complete_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/tabs_bar"
+            android:layout_below="@id/tabs_bar2"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/empty_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#00000000"
+        android:visibility="gone" />
+
+    <com.airbnb.lottie.LottieAnimationView
+      android:layout_width="85dp"
+      android:layout_height="85dp"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="85dp"
+      android:layout_marginEnd="15dp"
+      android:scaleType="centerCrop"
+      android:id="@+id/lottie_reward"
+      app:lottie_autoPlay="true"
+      app:lottie_loop="true"
+      app:lottie_rawRes="@raw/gift">
+
+    </com.airbnb.lottie.LottieAnimationView>
+
+</RelativeLayout>
