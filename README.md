@@ -16,13 +16,10 @@ Games puzzle sederhana dengan java.
 ## Feature Project
 
 * Sebagian project ini menggunakan source code orang lain.
-
 * Database SQLite untuk menyimpan scores
 * Menggunakan library lottie untuk membuat loading screen
 * Admob banner dan instertitial
 * Banyak bug karena banyak menggunakan images yang disimpan dalam apps
-* Fitur Movie Now Playing, Upcoming, Favourite
-
 
 ```java
 
